@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ScholarLens Prototype",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "projects/scholarlens/prototype"],
+      "port": 5173
+    }
+  ]
+}
