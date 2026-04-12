@@ -1,0 +1,189 @@
+// ScholarLens Database Schema
+// PostgreSQL + pgvector
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector]
+}
+
+// ─── 사용자 ────────────────────────────────────────
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  passwordHash  String
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  papers        Paper[]
+  tags          Tag[]
+  collections   Collection[]
+  reports       Report[]
+
+  @@map("users")
+}
+
+// ─── 논문 ──────────────────────────────────────────
+
+model Paper {
+  id               String      @id @default(cuid())
+  userId           String
+  title            String
+  authors          String[]    // 저자 목록
+  year             Int?        // 발행 연도
+  filePath         String      // storage/uploads/ 내 경로
+  originalFileName String      // 업로드 시 원본 파일명
+  fileType         FileType    // PDF, DOCX, TXT
+  pageCount        Int?
+  processedTextPath String?    // storage/processed/ 내 경로
+  status           PaperStatus @default(PENDING)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  user      User       @relation(fields: [userId], references: [id])
+  evidences Evidence[]
+  citations Citation[]
+
+  @@map("papers")
+}
+
+enum FileType {
+  PDF
+  DOCX
+  TXT
+}
+
+enum PaperStatus {
+  PENDING     // 업로드 완료, 처리 대기
+  PROCESSING  // AI 파이프라인 처리 중
+  DONE        // 근거 추출 완료
+  ERROR       // 처리 실패
+}
+
+// ─── 근거 문장 ─────────────────────────────────────
+
+model Evidence {
+  id              String   @id @default(cuid())
+  paperId         String
+  sentence        String   // 추출된 근거 문장 원문
+  pageNumber      Int?     // 원문 페이지 번호
+  paragraphNumber Int?     // 원문 단락 번호
+  confidence      Float    // AI 추출 신뢰도 (0.0 ~ 1.0)
+  keywords        String[] // 관련 키워드 태그
+  // embedding    Unsupported("vector(1536)")?  // pgvector 임베딩 (마이그레이션에서 직접 추가)
+  createdAt       DateTime @default(now())
+
+  paper          Paper            @relation(fields: [paperId], references: [id], onDelete: Cascade)
+  evidenceTags   EvidenceTag[]
+  collectionItems CollectionItem[]
+
+  @@map("evidences")
+}
+
+// ─── 인용 정보 ─────────────────────────────────────
+
+model Citation {
+  id            String         @id @default(cuid())
+  paperId       String
+  format        CitationFormat // APA, MLA, CHICAGO
+  formattedText String         // 포맷팅된 인용 텍스트
+  authorInfo    String?        // 저자 정보 요약
+  year          Int?
+  journalName   String?
+  citationCount Int?           // 피인용 수
+  doi           String?
+  createdAt     DateTime       @default(now())
+
+  paper Paper @relation(fields: [paperId], references: [id], onDelete: Cascade)
+
+  @@map("citations")
+}
+
+enum CitationFormat {
+  APA
+  MLA
+  CHICAGO
+}
+
+// ─── 태그 ──────────────────────────────────────────
+
+model Tag {
+  id     String @id @default(cuid())
+  name   String
+  color  String @default("#6366f1") // 기본 인디고 색상
+  userId String
+
+  user         User          @relation(fields: [userId], references: [id])
+  evidenceTags EvidenceTag[]
+
+  @@unique([name, userId])
+  @@map("tags")
+}
+
+model EvidenceTag {
+  evidenceId String
+  tagId      String
+
+  evidence Evidence @relation(fields: [evidenceId], references: [id], onDelete: Cascade)
+  tag      Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([evidenceId, tagId])
+  @@map("evidence_tags")
+}
+
+// ─── 컬렉션 (근거 모음) ───────────────────────────
+
+model Collection {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user  User             @relation(fields: [userId], references: [id])
+  items CollectionItem[]
+
+  @@map("collections")
+}
+
+model CollectionItem {
+  collectionId String
+  evidenceId   String
+
+  collection Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  evidence   Evidence   @relation(fields: [evidenceId], references: [id], onDelete: Cascade)
+
+  @@id([collectionId, evidenceId])
+  @@map("collection_items")
+}
+
+// ─── 보고서 ────────────────────────────────────────
+
+model Report {
+  id               String       @id @default(cuid())
+  userId           String
+  title            String
+  templateType     String?      // 사용된 템플릿 종류
+  content          String       // 보고서 내용 (JSON 또는 Markdown)
+  status           ReportStatus @default(DRAFT)
+  exportedFilePath String?      // storage/exports/ 내 경로
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("reports")
+}
+
+enum ReportStatus {
+  DRAFT
+  PUBLISHED
+}
