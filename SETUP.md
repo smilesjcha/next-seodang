@@ -39,7 +39,7 @@ cd next-seodang
 1. Claude Desktop 실행 → **Projects** → **New Project**.
 2. 프로젝트 이름 (예: "YLA Learning Companion", "Research Helper", "Sales Tracker") 지정.
 3. **Project knowledge**에 다음 폴더의 모든 `.md` 파일을 드래그 업로드.
-   - YLA 학생용: `docs/yla/` + `projects/01_yla_ppt_generator/`
+   - YLA 학생용: `docs/yla/` + `projects/01_yla_learning_companion/`
    - 대학원생용: `projects/02_research_report_helper/prompts/`
    - 직장인용: `projects/03_sales_inventory_tracker/prompts/` + `templates/`
 4. 채팅에서 스킬·프롬프트를 호출.
@@ -78,7 +78,7 @@ jupyter lab
 
 ### 시나리오 A: YLA 학생이 토요일 발표 준비
 
-1. 평일에 책을 읽고 인용·메모를 `projects/01_yla_ppt_generator/workspace/<책이름>/reading_note_<날짜>.md`에 기록.
+1. 평일에 책을 읽고 인용·메모를 `projects/01_yla_learning_companion/workspace/<책이름>/reading_note_<날짜>.md`에 기록.
 2. `outline-essay(yla)`로 에세이 구조 잡기 → 직접 작성 → `feedback-essay(yla)`로 피드백 받고 수정.
 3. 토요일 아침 — `create-ppt(yla)` 호출. 사전 체크리스트 통과 후 슬라이드 + 스크립트 생성.
 4. 발표 후 — 교수 피드백을 `apply-feedback(yla)`로 항목화 → 직접 수정 → `finalize-portfolio(yla)`로 최종본 점검.
@@ -105,7 +105,7 @@ jupyter lab
 ### 새 프롬프트·스킬 추가
 - 해당 프로젝트의 `prompts/` 또는 `skills/<stage>/` 아래에 `<verb>-<object>.<scope>.md` 형식으로 저장.
 - governance scope: YLA → `(yla)`, Research → `(rr)`, Sales/Inventory → `(si)`. 새 프로젝트면 새 scope 정의.
-- 스킬 파일은 [01 프로젝트의 표준 구조](projects/01_yla_ppt_generator/README.md)를 따른다.
+- 스킬 파일은 [01 프로젝트의 표준 구조](projects/01_yla_learning_companion/README.md)를 따른다.
 
 ### 새 예시 추가
 - `examples/`에 입력/출력 한 쌍으로 추가.

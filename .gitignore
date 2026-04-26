@@ -5,12 +5,12 @@ __pycache__/
 
 # Project local data and student workspaces
 # Use `dir/*` (not `dir/`) so re-include rules below can take effect
-projects/01_yla_ppt_generator/workspace/*
+projects/01_yla_learning_companion/workspace/*
 projects/02_research_report_helper/data/*
 projects/03_sales_inventory_tracker/data/*
 
 # Keep .gitkeep so empty dirs are tracked
-!projects/01_yla_ppt_generator/workspace/.gitkeep
+!projects/01_yla_learning_companion/workspace/.gitkeep
 !projects/02_research_report_helper/data/.gitkeep
 !projects/03_sales_inventory_tracker/data/.gitkeep
 

@@ -9,7 +9,7 @@ YLA(Young Leaders Academy) 학생이 **읽기 → 쓰기 → 말하기 → 토�
 1. Claude Desktop을 열고 **새 Project**를 만듭니다 (예: "YLA Learning Companion").
 2. **Project knowledge**에 다음 두 폴더를 통째로 업로드합니다.
    - `docs/yla/` 안의 모든 `.md`
-   - `projects/01_yla_ppt_generator/` 안의 모든 `.md` (특히 `skills/`)
+   - `projects/01_yla_learning_companion/` 안의 모든 `.md` (특히 `skills/`)
 3. 채팅에서 `<skill-name>(yla)` 형식으로 스킬을 호출합니다.
    - 예: `explain-classic(yla)로 『논어』 배경 알려줘`
    - 예: `feedback-essay(yla) — 첨부한 초안에 피드백 부탁해`

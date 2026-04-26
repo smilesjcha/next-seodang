@@ -28,7 +28,7 @@ next-seodang/
 ├── prompts/             # 강의·실습·리서치 프롬프트
 ├── projects/
 │   ├── beautiful_seodang_ai_project/   # 학생 프로젝트 작업 템플릿
-│   ├── 01_yla_ppt_generator/           # YLA 학생용 5단계 학습 도우미
+│   ├── 01_yla_learning_companion/      # YLA 학생용 5단계 학습 도우미
 │   ├── 02_research_report_helper/      # 대학원생 연구보고서 도우미
 │   └── 03_sales_inventory_tracker/     # 직장인 매출/재고 + 추이 예측
 ├── SETUP.md             # 클론부터 사용까지 (모든 컴퓨터)
@@ -41,7 +41,7 @@ next-seodang/
 | 목적 | 시작 파일 |
 |---|---|
 | 강의를 준비한다 (강사) | [docs/lecture/lecture_strategy.md](docs/lecture/lecture_strategy.md) |
-| YLA 발표를 준비한다 (학생) | [projects/01_yla_ppt_generator/README.md](projects/01_yla_ppt_generator/README.md) |
+| YLA 발표·세미나를 준비한다 (학생) | [projects/01_yla_learning_companion/README.md](projects/01_yla_learning_companion/README.md) |
 | 연구보고서를 쓴다 (대학원생) | [projects/02_research_report_helper/README.md](projects/02_research_report_helper/README.md) |
 | 매출·재고 추세 분석 (직장인) | [projects/03_sales_inventory_tracker/README.md](projects/03_sales_inventory_tracker/README.md) |
 | 다른 컴퓨터에서 처음 설치 | [SETUP.md](SETUP.md) |

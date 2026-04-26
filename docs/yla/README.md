@@ -1,6 +1,6 @@
 # docs/yla/ — 아름다운서당 YLA 학습 컨텍스트
 
-이 디렉터리는 아름다운서당 **YLA(Young Leaders Academy)** 과정의 교육 철학·운영 방식·AI 활용 원칙을 정리한 참고 문서입니다. `projects/01_yla_ppt_generator/`의 모든 스킬은 이 문서들을 컨텍스트로 참조합니다.
+이 디렉터리는 아름다운서당 **YLA(Young Leaders Academy)** 과정의 교육 철학·운영 방식·AI 활용 원칙을 정리한 참고 문서입니다. `projects/01_yla_learning_companion/`의 모든 스킬은 이 문서들을 컨텍스트로 참조합니다.
 
 | 파일 | 한 줄 요약 |
 |---|---|
