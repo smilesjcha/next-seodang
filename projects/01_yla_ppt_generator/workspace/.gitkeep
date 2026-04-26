@@ -1,0 +1,20 @@
+# 학생 작업 공간
+
+이 폴더는 학생 본인의 자료(독서노트·에세이 초안·PPT·토론 메모)를 두는 곳입니다.
+
+이 폴더의 내용은 git에 커밋되지 않습니다 (`.gitignore` 처리됨). 자기 자료는 본인 컴퓨터에만 보관됩니다.
+
+권장 구조:
+
+```
+workspace/
+├── <책이름 또는 주제>/
+│   ├── reading_note_<날짜>.md
+│   ├── essay_v1.md
+│   ├── essay_v2.md          # 피드백 반영 후
+│   ├── slides_v1.md
+│   ├── debate_memo.md
+│   └── feedback_<출처>.md   # 교수/동료 피드백
+```
+
+`workspace-status(yla)` 스킬로 진행 상태를 한눈에 볼 수 있습니다.

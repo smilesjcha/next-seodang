@@ -1,0 +1,12 @@
+# 데이터 폴더
+
+이 폴더는 git에서 무시됩니다 (`.gitignore`).
+
+권장 파일:
+- `sales.csv` — 본인 회사 매출 데이터 ([sales_schema](../templates/sales_schema.md) 참조)
+- `inventory.csv` — 재고 데이터 ([inventory_schema](../templates/inventory_schema.md) 참조)
+- `sales_clean.csv` — 노트북 01 출력
+- `forecast.csv` — 노트북 03 출력
+- `trend_*.png` — 차트 이미지
+
+학습용 샘플은 `sample_sales.csv`, `sample_inventory.csv`로 커밋되어 있습니다 (이름이 `sample_`로 시작하는 파일은 예외적으로 추적됨 — `.gitignore` 참조).

@@ -1,0 +1,9 @@
+# 데이터 폴더
+
+이 폴더는 git에서 무시됩니다 (`.gitignore`).
+
+노트북 실행 시 다음 파일이 생성됩니다:
+
+- `papers_raw.csv` — `01_search_papers.ipynb` 출력
+- `papers_scored.csv` — `02_score_quality.ipynb` 출력
+- `papers_top_N.md` — `03_export_to_claude.ipynb` 출력 (Claude Desktop에 붙여넣을 markdown 표)

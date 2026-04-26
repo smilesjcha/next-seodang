@@ -1,0 +1,14 @@
+# 노트북(projects/02, projects/03) 사용자만 설치하면 됩니다.
+# YLA PPT 생성기만 사용하는 경우 Python 환경이 필요 없습니다.
+
+jupyter>=1.0
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+requests>=2.31
+statsmodels>=0.14
+scipy>=1.11
+tabulate>=0.9            # pandas .to_markdown() 에서 사용
+
+# 더 정교한 시계열 예측이 필요하면 별도 설치:
+# prophet>=1.1
