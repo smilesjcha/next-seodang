@@ -30,7 +30,9 @@ next-seodang/
 │   ├── beautiful_seodang_ai_project/   # 학생 프로젝트 작업 템플릿
 │   ├── 01_yla_learning_companion/      # YLA 학생용 5단계 학습 도우미
 │   ├── 02_research_report_helper/      # 대학원생 연구보고서 도우미
-│   └── 03_sales_inventory_tracker/     # 직장인 매출/재고 + 추이 예측
+│   ├── 03_sales_inventory_tracker/     # 직장인 매출/재고 + 추이 예측
+│   ├── 04_yla_intro_lecture/           # 위 3개를 YLA에 소개하는 강의 자료 (템플릿/프레임워크)
+│   └── 05_sungjae_cha_lectures/        # 차성재 발표자의 누적 강의 deck 포트폴리오
 ├── SETUP.md             # 클론부터 사용까지 (모든 컴퓨터)
 ├── CONTRIBUTING.md      # 개선·확장 가이드
 └── requirements.txt     # 노트북 사용자만 설치
@@ -44,6 +46,8 @@ next-seodang/
 | YLA 발표·세미나를 준비한다 (학생) | [projects/01_yla_learning_companion/README.md](projects/01_yla_learning_companion/README.md) |
 | 연구보고서를 쓴다 (대학원생) | [projects/02_research_report_helper/README.md](projects/02_research_report_helper/README.md) |
 | 매출·재고 추세 분석 (직장인) | [projects/03_sales_inventory_tracker/README.md](projects/03_sales_inventory_tracker/README.md) |
+| YLA에 Claude 소개 강의를 한다 (발표자, 프레임워크) | [projects/04_yla_intro_lecture/README.md](projects/04_yla_intro_lecture/README.md) |
+| 차성재의 실제 강의 deck를 본다 | [projects/05_sungjae_cha_lectures/README.md](projects/05_sungjae_cha_lectures/README.md) |
 | 다른 컴퓨터에서 처음 설치 | [SETUP.md](SETUP.md) |
 | 새 스킬·프롬프트 기여 | [CONTRIBUTING.md](CONTRIBUTING.md) |
 

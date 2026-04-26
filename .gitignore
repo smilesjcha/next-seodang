@@ -17,6 +17,15 @@ projects/03_sales_inventory_tracker/data/*
 # Sample data for project 03 must be committed
 !projects/03_sales_inventory_tracker/data/sample_*.csv
 
+# Marp build artifacts (any deck.pdf/pptx/html under projects/04 or 05)
+projects/04_yla_intro_lecture/slides/deck.pdf
+projects/04_yla_intro_lecture/slides/deck.pptx
+projects/04_yla_intro_lecture/slides/deck.html
+projects/05_sungjae_cha_lectures/**/deck.pdf
+projects/05_sungjae_cha_lectures/**/deck.pptx
+projects/05_sungjae_cha_lectures/**/deck.editable.pptx
+projects/05_sungjae_cha_lectures/**/deck.html
+
 # Python
 .venv/
 venv/
