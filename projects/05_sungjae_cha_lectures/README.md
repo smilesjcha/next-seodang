@@ -8,7 +8,7 @@
 
 | 일자 | 폴더 | 주제 | 대상 | 길이 | 상태 |
 |---|---|---|---|---|---|
-| 2026-04-26 | [2026_04_26_yla_intro/](2026_04_26_yla_intro/) | Claude로 사고를 증폭하다 — 3가지 use case | YLA 재학·졸업생 | ~100분 | 진행 예정 |
+| 2026-04-26 | [2026_04_26_nextseodang_intro/](2026_04_26_nextseodang_intro/) | Claude로 사고를 증폭하다 — 3가지 use case | 넥스트서당 졸업생 + YLA 재학생 | ~110분 | 진행 예정 |
 
 ## 폴더 표준
 
@@ -27,7 +27,7 @@ YYYY_MM_DD_<주제>/
 ## 빌드 (오늘 강의용)
 
 ```bash
-cd projects/05_sungjae_cha_lectures/2026_04_26_yla_intro
+cd projects/05_sungjae_cha_lectures/2026_04_26_nextseodang_intro
 
 # PDF
 npx @marp-team/marp-cli@latest deck.md \

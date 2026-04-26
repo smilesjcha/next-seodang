@@ -161,11 +161,37 @@ section header {
 
 /* ─────────── Slide types ─────────── */
 
-/* Title slide: large centered title, no top border emphasis */
+/* Title slide: large centered title, premium thick black borders */
 section.title {
   justify-content: center;
   text-align: left;
-  border-top-width: 8px;
+  border-top: 12px solid var(--border-color);
+  border-bottom: 12px solid var(--border-color);
+  position: relative;
+}
+
+/* Inner accent line — top */
+section.title::before {
+  content: '';
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 18px;
+  height: 1px;
+  background: var(--border-color);
+}
+
+/* Suppress page number on title slide (bottom-right ::after) */
+section.title::after {
+  content: '';
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 18px;
+  top: auto;
+  height: 1px;
+  background: var(--border-color);
+  font-size: 0;
 }
 
 section.title h1 {
@@ -179,6 +205,17 @@ section.title h2 {
   font-weight: 400;
   color: var(--muted);
   margin: 0 0 8px 0;
+}
+
+section.title p {
+  font-size: 18pt;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+section.title strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 /* Section divider: huge number + section name */

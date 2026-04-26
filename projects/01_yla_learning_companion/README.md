@@ -66,6 +66,7 @@ YLA(Young Leaders Academy) 학생이 **읽기 → 쓰기 → 말하기 → 토�
 - `skills/` — 14개 스킬 `.md` 파일.
 - `templates/` — 학생이 채우는 입력 양식, `create-ppt(yla)` 체크리스트, 슬라이드 출력 형식.
 - `examples/` — 『국가론』 발표를 예시로 한 입력/출력 한 쌍.
+- `workspace_template/` — **주차별/주제별 표준 폴더 구조 템플릿**. 학생이 `cp -r`로 본인 `workspace/`에 복사해 시작. ([상세 가이드](workspace_template/README.md))
 - `workspace/` — **학생이 본인의 자료를 두는 작업 공간**. `.gitkeep` 외에는 git에서 무시됩니다(자기 자료는 본인 컴퓨터에만).
 
 ## AI 활용 원칙 (요약)
