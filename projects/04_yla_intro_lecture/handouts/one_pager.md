@@ -38,7 +38,7 @@ Claude Desktop → New Project → 본인 페르소나 폴더의 `.md` 파일 �
 - **입력**: 본인 보고서·에세이 1개
 - **호출**: `create-ppt(yla) — 다음 보고서로 발표 PPT 만들어줘. 발표 형식: 3분 개인 발표`
 - **결과**: 사전 체크리스트 → 슬라이드 markdown + 발표자 스크립트
-- **막히면**: `examples/input_example_gukbron.md` 사용
+- **막히면**: `examples/input_example_gukkaron.md` 사용
 
 ### 2. 대학원생 (`projects/02_research_report_helper/`)
 

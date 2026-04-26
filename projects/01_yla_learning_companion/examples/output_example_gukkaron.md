@@ -1,6 +1,6 @@
 # 예시 출력 — 플라톤 『국가론』 발표 PPT 초안
 
-`create-ppt(yla)`가 위 [input_example_gukbron.md](input_example_gukbron.md) 입력에 대해 반환하는 결과 예시입니다.
+`create-ppt(yla)`가 위 [input_example_gukkaron.md](input_example_gukkaron.md) 입력에 대해 반환하는 결과 예시입니다.
 
 ---
 

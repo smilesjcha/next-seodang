@@ -219,7 +219,7 @@ AI 부문 겸임교수 @ 시립대 · 아주대
   - 부족 항목은 `[학생 보완 필요]` placeholder
 - **20분 안에 도달**: 본인 발표 자료 1세트 + 자가 수정 회고 한 줄
 - **학생이 끝까지 맡는 일**: 인용 선택, 주장 결정, 마지막 문장 고치기
-- **막히면**: `examples/input_example_gukbron.md`(국가론 예시) 사용
+- **막히면**: `examples/input_example_gukkaron.md`(국가론 예시) 사용
 
 ---
 

@@ -24,6 +24,7 @@ projects/04_yla_intro_lecture/slides/deck.html
 projects/05_sungjae_cha_lectures/**/deck.pdf
 projects/05_sungjae_cha_lectures/**/deck.pptx
 projects/05_sungjae_cha_lectures/**/deck.editable.pptx
+projects/05_sungjae_cha_lectures/**/deck.editable.pdf
 projects/05_sungjae_cha_lectures/**/deck.html
 # assets/ 폴더는 의도적으로 추적합니다. 민감한 스크린샷은 개별 파일을 .gitignore에 추가하세요.
 

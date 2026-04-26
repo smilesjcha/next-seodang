@@ -12,7 +12,7 @@
 ## 사전 조건
 
 - Claude Desktop의 "YLA Learning Companion" Project가 만들어져 있고, `docs/yla/` + `projects/01_yla_learning_companion/`이 Project knowledge에 등록.
-- 학생이 본인 보고서·에세이 1개를 가져왔거나, 없으면 `examples/input_example_gukbron.md`을 사용.
+- 학생이 본인 보고서·에세이 1개를 가져왔거나, 없으면 `examples/input_example_gukkaron.md`을 사용.
 
 ## 진행 (20분)
 
@@ -32,7 +32,7 @@ cp ~/Documents/내보고서.md projects/01_yla_learning_companion/workspace/논�
 > "보고서를 안 가져오신 분은 examples 폴더의 국가론 예시를 복사해서 진행하세요."
 
 ```bash
-cp projects/01_yla_learning_companion/examples/input_example_gukbron.md \
+cp projects/01_yla_learning_companion/examples/input_example_gukkaron.md \
    projects/01_yla_learning_companion/workspace/국가론/essay_v1.md
 ```
 
@@ -92,7 +92,7 @@ create-ppt(yla) — 다음 보고서로 발표 PPT 만들어줘.
 | 막힘 | 대응 |
 |---|---|
 | Claude Desktop이 응답 안 함 | 강사가 미리 받아둔 결과 markdown을 USB·카페로 배포 |
-| 학생이 보고서를 가져오지 않음 | examples/input_example_gukbron.md 복사하여 진행 |
+| 학생이 보고서를 가져오지 않음 | examples/input_example_gukkaron.md 복사하여 진행 |
 | 학생이 \"AI가 본문도 써주면 좋겠다\" 불평 | 의도된 가드레일임을 강조, `docs/yla/06_ai_cautions.md` 1줄 인용 |
 | Project knowledge 업로드 실패 | 채팅창에 핵심 prompt 파일을 직접 붙여넣기 |
 

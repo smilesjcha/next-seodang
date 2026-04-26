@@ -60,7 +60,7 @@
 
 | 파일 | 의도 | 이유 | 어떻게 |
 |---|---|---|---|
-| `projects/01_yla_learning_companion/examples/input_example_gukbron.md` | 보고서 없는 학생용 데모 입력 | YLA 학생이 보고서를 안 가져오면 `create-ppt(yla)`이 거절 → 실습이 멈춘다. 가상의 학생 보고서를 백업으로 둔다. | 학생이 자기 보고서가 없으면 이 파일을 `workspace/<책>/essay_v1.md`로 복사 후 진행. |
+| `projects/01_yla_learning_companion/examples/input_example_gukkaron.md` | 보고서 없는 학생용 데모 입력 | YLA 학생이 보고서를 안 가져오면 `create-ppt(yla)`이 거절 → 실습이 멈춘다. 가상의 학생 보고서를 백업으로 둔다. | 학생이 자기 보고서가 없으면 이 파일을 `workspace/<책>/essay_v1.md`로 복사 후 진행. |
 | `projects/02_research_report_helper/notebooks/.../papers_*.csv` | 노트북 출력의 캐시 | 실습 중 OpenAlex API가 일시적으로 느리면 강의 흐름이 끊긴다. 강의 전 미리 한번 돌려둔 결과를 백업으로. | 강의 직전 강사가 노트북 1·2를 한번 실행해 두고, 학생들에게 \"느리면 캐시 결과를 복사해서 시작\"이라고 안내. |
 | `projects/03_sales_inventory_tracker/data/sample_purchases.csv` (36개월 × 3 SKU) | 매입 단가 시계열 — STL/매크로/시그널/헷지 4개 노트북의 공통 입력 | 회사 데이터를 가져올 수 없는 학생도 동일한 흐름을 100% 체험할 수 있어야 한다. 36개월·계절성·매크로 영향이 의도적으로 들어가 있어 노트북이 \"의미 있는 결과\"를 낸다. | 노트북 안 `INPUT_PATH = '../data/sample_purchases.csv'` 그대로 실행. 본인 회사 데이터로 바꿀 때 이 한 줄만 변경. |
 | `projects/03_sales_inventory_tracker/data/sample_macro.csv` (36개월) | 매크로 컨텍스트 (FX/유가/원가) | "매입가가 오른 게 우리 협상력 부족이냐, 세계 어디든 같은 흐름이냐" 구분 능력을 보여주기 위함. 무료 매크로 데이터를 직접 받아오는 코드는 강의 시간에 안 어울림. | `notebook 05`가 자동으로 결합 사용. |
@@ -115,7 +115,7 @@
    ├─ S06~08  use case 1 (학생)
    │           │
    │           실습 1 ─────────  projects/01_yla_learning_companion/skills/{read,write,speak}/*.yla.md
-   │                              + examples/input_example_gukbron.md (보고서 없는 학생용)
+   │                              + examples/input_example_gukkaron.md (보고서 없는 학생용)
    │
    ├─ S09~11  use case 2 (대학원생)
    │           │
